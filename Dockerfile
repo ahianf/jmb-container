@@ -6,7 +6,7 @@ ENV JMB_VERSION 0.3.6
 RUN mkdir -p /jmb/config
 ADD https://github.com/jagrosh/MusicBot/releases/download/$JMB_VERSION/JMusicBot-$JMB_VERSION.jar /jmb/JMusicBot.jar
 
-COPY config.txt /jmb/config
+COPY ./config.txt /jmb/config
 COPY ./docker-entrypoint.sh /jmb
 
 RUN chmod +x /jmb/docker-entrypoint.sh
